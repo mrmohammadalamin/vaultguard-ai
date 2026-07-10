@@ -246,10 +246,8 @@ Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
 ### 🎥 Recorded Video Demo
 
 Watch the full system execution, including parallel subagent processing, self-healing closed loops, and the human approval gate in action:
+[![VaultGuard AI Demo Video](screenshots/vemgard1.png)]([https://youtu.be/FckvjU6hSz8](https://youtu.be/EplAHbbkxdM))
 
-<video src="screenshots/venguardvideo.mp4" controls width="100%" poster="screenshots/vemgard1.png">
-  Your browser does not support the video tag. Watch the video directly: <a href="screenshots/venguardvideo.mp4">screenshots/venguardvideo.mp4</a>
-</video>
 
 ---
 
