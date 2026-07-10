@@ -90,6 +90,79 @@ sequenceDiagram
     Master-->>FE: Goal Complete (WebSocket Event)
 ```
 
+### 🗺️ System Mindmap
+
+This mindmap outlines the functional domains and responsibilities managed by VaultGuard AI:
+
+```mermaid
+mindmap
+  root((VaultGuard AI))
+    Governance Framework
+      Deny Rules (rm -rf, env)
+      Approval Rules (deploy, migrate)
+      Risk Categorization (Low to Critical)
+    Multi-Agent Orchestration
+      Master Agent (State Machine)
+      Workers (Planning, Security, Build, Test, Deploy, Verify, Audit)
+      Parallel Execution (Security + Dependency)
+    Self-Correcting Loops
+      Vulnerability Patching (npm audit fix)
+      Code Self-Healing (auth.test.ts patching)
+    Compliance & Telemetry
+      SQLite Audit Logging
+      Real-Time WebSockets
+      Framer Motion Dashboard
+```
+
+### 🏛️ High-Level Architectural View
+
+The structural relationship between the operator UI, telemetry communication layer, core engine, and worker agents:
+
+```mermaid
+graph TD
+  subgraph Frontend [Operator Dashboard (Next.js)]
+    UI[Dashboard View]
+    TL[Animated Progress Timeline]
+    LF[Live Agent Terminal Feed]
+    AG[Human Approval Gate Dialog]
+  end
+
+  subgraph Telemetry [Telemetry Layer]
+    WS[WebSockets Server]
+    REST[REST API Endpoints]
+  end
+
+  subgraph Engine [Core Governance Engine (FastAPI)]
+    SM[Master Agent State Machine]
+    GE[Governance Engine Interceptor]
+    DB[SQLite Audit Logging]
+  end
+
+  subgraph Workers [Specialized Sub-Agents]
+    PA[Planning Agent]
+    SA[Security Agent]
+    DA[Dependency Agent]
+    BA[Build Agent]
+    TA[Testing Agent]
+    DepA[Deployment Agent]
+    VA[Verification Agent]
+    AuA[Audit Agent]
+  end
+
+  UI <--> WS
+  UI --> REST
+  WS <--> SM
+  REST --> DB
+  SM --> Workers
+  Workers --> GE
+  GE --> DB
+  
+  style Frontend fill:#f9f9f9,stroke:#3b82f6,stroke-width:2px;
+  style Telemetry fill:#f9f9f9,stroke:#10b981,stroke-width:2px;
+  style Engine fill:#f9f9f9,stroke:#8b5cf6,stroke-width:2px;
+  style Workers fill:#f9f9f9,stroke:#f59e0b,stroke-width:2px;
+```
+
 ---
 
 ## 🛠️ Codebase Structure
