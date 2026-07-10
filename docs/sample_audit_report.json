@@ -1,0 +1,38 @@
+[
+  {
+    "id": 104,
+    "timestamp": "2026-07-08T01:21:00.000Z",
+    "goal": "Secure and Deploy Customer Portal",
+    "agent": "VaultGuard Autonomous Agent",
+    "action": "npm audit",
+    "policy_decision": "ALLOW",
+    "approval_event": null,
+    "retry_count": 1,
+    "execution_time_ms": 3105,
+    "final_status": "SUCCESS"
+  },
+  {
+    "id": 105,
+    "timestamp": "2026-07-08T01:21:08.000Z",
+    "goal": "Secure and Deploy Customer Portal",
+    "agent": "VaultGuard Autonomous Agent",
+    "action": "jest",
+    "policy_decision": "ALLOW",
+    "approval_event": null,
+    "retry_count": 1,
+    "execution_time_ms": 4120,
+    "final_status": "SUCCESS"
+  },
+  {
+    "id": 106,
+    "timestamp": "2026-07-08T01:21:15.000Z",
+    "goal": "Secure and Deploy Customer Portal",
+    "agent": "VaultGuard Autonomous Agent",
+    "action": "npm run deploy",
+    "policy_decision": "REQUIRE_APPROVAL",
+    "approval_event": "APPROVED",
+    "retry_count": 0,
+    "execution_time_ms": 1500,
+    "final_status": "SUCCESS"
+  }
+]
