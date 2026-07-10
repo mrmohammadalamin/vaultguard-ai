@@ -120,7 +120,7 @@ The structural relationship between the operator UI, telemetry communication lay
 
 ```mermaid
 graph TD
-  subgraph Frontend [Operator Dashboard (Next.js)]
+  subgraph Frontend [Operator Dashboard Next.js]
     UI[Dashboard View]
     TL[Animated Progress Timeline]
     LF[Live Agent Terminal Feed]
@@ -132,7 +132,7 @@ graph TD
     REST[REST API Endpoints]
   end
 
-  subgraph Engine [Core Governance Engine (FastAPI)]
+  subgraph Engine [Core Governance Engine FastAPI]
     SM[Master Agent State Machine]
     GE[Governance Engine Interceptor]
     DB[SQLite Audit Logging]
@@ -149,18 +149,15 @@ graph TD
     AuA[Audit Agent]
   end
 
-  UI <--> WS
+  UI --> WS
+  WS --> UI
   UI --> REST
-  WS <--> SM
+  WS --> SM
+  SM --> WS
   REST --> DB
   SM --> Workers
   Workers --> GE
   GE --> DB
-  
-  style Frontend fill:#f9f9f9,stroke:#3b82f6,stroke-width:2px;
-  style Telemetry fill:#f9f9f9,stroke:#10b981,stroke-width:2px;
-  style Engine fill:#f9f9f9,stroke:#8b5cf6,stroke-width:2px;
-  style Workers fill:#f9f9f9,stroke:#f59e0b,stroke-width:2px;
 ```
 
 ---
