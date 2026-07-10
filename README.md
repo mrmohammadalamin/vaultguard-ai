@@ -239,11 +239,9 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
 
----
 
-## 📺 Demonstration & Walkthrough
 
-Refer to [docs/demo_script.md](docs/demo_script.md) for a step-by-step presentation script designed for the sprint judges. Below is the visual representation of the execution flow.
+
 
 ### 🎥 Recorded Video Demo
 
@@ -277,7 +275,6 @@ As the flow moves to the deployment phase, the Deployment Agent attempts to run 
 Once the operator clicks **Approve**, the deployment proceeds. The Verification Agent confirms the service's health, and the Audit Agent saves a complete execution trace (actions, risks, decisions, and approvals) to the database, marking the goal as **COMPLETE**.
 ![Verification & Audit Logs](screenshots/vemgard5.png)
 
----
 
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+
